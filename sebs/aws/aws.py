@@ -483,6 +483,7 @@ class AWS(System):
         return trigger
 
     def _enforce_cold_start(self, function: Function):
+        time.sleep(5)
         func = cast(LambdaFunction, function)
         self.get_lambda_client().update_function_configuration(
             FunctionName=func.name,
