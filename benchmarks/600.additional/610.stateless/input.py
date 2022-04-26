@@ -1,19 +1,19 @@
 arr_dim1s = {
-	'sml': 10,
-	'med': 400
-	'lrg': 1000
+	'test': 10,
+	'small': 400,
+	'large': 1000
 }
 
 arr_dim2s = {
-	'sml': 5
-        'med': 200
-        'lrg': 500
+	'test': 5,
+        'small': 200,
+        'large': 500
 }
 
 arr_dim3s = {
-	'sml': 8,
-        'med': 300
-        'lrg': 750
+	'test': 8,
+        'small': 300,
+        'large': 750
 }
 
 
