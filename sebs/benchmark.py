@@ -315,6 +315,7 @@ class Benchmark(LoggingBase):
         return sum(sizes)
 
     def install_dependencies(self, output_dir):
+        print(f"running install dependencies on {output_dir}!")
         # do we have docker image for this run and language?
         if "build" not in self._system_config.docker_image_types(
             self._deployment_name, self.language_name
@@ -361,6 +362,7 @@ class Benchmark(LoggingBase):
             # run Docker container to install packages
             PACKAGE_FILES = {"python": "requirements.txt", "nodejs": "package.json"}
             file = os.path.join(output_dir, PACKAGE_FILES[self.language_name])
+            print(f"checking if file exists: {file}")
             if os.path.exists(file):
                 try:
                     self.logging.info(
@@ -375,6 +377,12 @@ class Benchmark(LoggingBase):
                                 path=os.path.abspath(output_dir)
                             )
                         )
+                        print(f"docker mount from path {os.path.abspath(output_dir)}")
+                        print(f"image: {repo_name}:{image_name}")
+                        print(f"Volumes is: {volumes}")
+                        print(f"Environment: {self.benchmark}")
+                        print(f"user: {uid}")
+
                         stdout = self._docker_client.containers.run(
                             "{}:{}".format(repo_name, image_name),
                             volumes=volumes,
