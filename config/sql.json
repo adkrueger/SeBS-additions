@@ -9,7 +9,7 @@
     },
     "type": "invocation-overhead",
     "perf-cost": {
-      "benchmark": "610.stateless",
+      "benchmark": "620.sql",
       "experiments": ["cold", "warm"],
       "input-size": "test",
       "repetitions": 5,

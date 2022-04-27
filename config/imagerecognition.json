@@ -1,6 +1,6 @@
 {
   "experiments": {
-    "update_code": true,
+    "update_code": false,
     "update_storage": false,
     "download_results": false,
     "runtime": {
@@ -9,11 +9,11 @@
     },
     "type": "invocation-overhead",
     "perf-cost": {
-      "benchmark": "610.stateless",
+      "benchmark": "411.image-recognition",
       "experiments": ["cold", "warm"],
       "input-size": "test",
-      "repetitions": 5,
-      "concurrent-invocations": 5,
+      "repetitions": 10,
+      "concurrent-invocations": 10,
       "memory-sizes": [128, 256]
     },
     "invocation-overhead": {
@@ -50,3 +50,4 @@
     }
   }
 }
+
