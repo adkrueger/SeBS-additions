@@ -12,8 +12,8 @@
       "benchmark": "210.thumbnailer",
       "experiments": ["cold", "warm"],
       "input-size": "test",
-      "repetitions": 10,
-      "concurrent-invocations": 10,
+      "repetitions": 5,
+      "concurrent-invocations": 5,
       "memory-sizes": [128, 256]
     },
     "invocation-overhead": {
