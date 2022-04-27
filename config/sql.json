@@ -1,6 +1,6 @@
 {
   "experiments": {
-    "update_code": false,
+    "update_code": true,
     "update_storage": false,
     "download_results": false,
     "runtime": {
@@ -9,7 +9,7 @@
     },
     "type": "invocation-overhead",
     "perf-cost": {
-      "benchmark": "210.thumbnailer",
+      "benchmark": "620.sql",
       "experiments": ["cold", "warm"],
       "input-size": "test",
       "repetitions": 5,
