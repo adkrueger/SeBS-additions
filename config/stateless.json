@@ -11,7 +11,7 @@
     "perf-cost": {
       "benchmark": "610.stateless",
       "experiments": ["cold", "warm"],
-      "input-size": "test",
+      "input-size": "large",
       "repetitions": 5,
       "concurrent-invocations": 5,
       "memory-sizes": [128, 256]
