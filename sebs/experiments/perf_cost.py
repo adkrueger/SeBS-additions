@@ -317,6 +317,8 @@ class PerfCost(Experiment):
                         memory = 0
                     exp_type = fname[0]
                     with open(f, "r") as in_f:
+                        print(f">> opened f: {f}")
+                        print(f">> as: {in_f}")
                         config = json.load(in_f)
                         statistics = config["statistics"]
                         experiments = ExperimentResult.deserialize(

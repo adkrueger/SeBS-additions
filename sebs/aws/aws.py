@@ -263,6 +263,7 @@ class AWS(System):
         # Run AWS update
         # AWS Lambda limit on zip deployment
         if code_size < 50 * 1024 * 1024:
+            time.sleep(5)
             with open(package, "rb") as code_body:
                 self.client.update_function_code(FunctionName=name, ZipFile=code_body.read())
         # Upload code package to S3, then update
